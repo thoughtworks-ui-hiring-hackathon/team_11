@@ -19,29 +19,31 @@ export class HomeComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-    
+    this.getTrendingMovies();
+    this.getLatestMovies();
+    this.popularMovies();
   }
 
   getTrendingMovies() {
     this.homeService.getTrendingMovies().subscribe(data => {
-      if (data && data['result']) {
-        this.trendingMovies = data['result'];
+      if (data && data['results']) {
+        this.trendingMovies = data['results'];
       }
     });
   }
 
   getLatestMovies() {
     this.homeService.getLatestMovies().subscribe(data => {
-      if (data && data['result']) {
-        this.latestMovies = data['result'];
+      if (data && data['results']) {
+        this.latestMovies = data['results'];
       }
     });
   }
 
   getPopularMovies() {
     this.homeService.getPopularMovies().subscribe(data => {
-      if (data && data['result']) {
-        this.popularMovies = data['result'];
+      if (data && data['results']) {
+        this.popularMovies = data['results'];
       }
     });
   }

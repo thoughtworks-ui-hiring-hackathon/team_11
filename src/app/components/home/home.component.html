@@ -1,14 +1,14 @@
 <div class="" id="">
   <div class="latest-movies">
     <div class="movies-type-header">Latest</div>
-    <app-movie-card></app-movie-card>
+    <app-movie-card [movies]="latestMovies"></app-movie-card>
   </div>
   <div class="trending-movies">
       <div class="movies-type-header">Trending</div>
-      <app-movie-card></app-movie-card>
+      <app-movie-card [movies]="trendingMovies"></app-movie-card>
   </div>
   <div class="popular-movies">
       <div class="movies-type-header">Most Watched</div>
-      <app-movie-card></app-movie-card>
+      <app-movie-card [movies]="popularMovies"></app-movie-card>
   </div>
 </div>
