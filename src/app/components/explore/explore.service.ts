@@ -11,4 +11,12 @@ export class ExploreService {
     getMovies(searchQuery) {
         return this.httpClient.get(API_URLS.MOVIES.SEARCH + this.apiKey + '&language=en-US&query=' + searchQuery + '&page=1&include_adult=false');
     }
+
+    getGenres() {
+        return this.httpClient.get(API_URLS.MOVIES.GENRE_LIST + this.apiKey + '&language=en-US');
+    }
+
+    getImageConfig() {
+        return this.httpClient.get('https://api.themoviedb.org/3/configuration' + this.apiKey)
+    }
 }

@@ -23,4 +23,8 @@ export class HomeService {
     getGenres() {
         return this.httpClient.get(API_URLS.MOVIES.GENRE_LIST + this.apiKey + '&language=en-US');
     }
+
+    getImageConfig() {
+        return this.httpClient.get('https://api.themoviedb.org/3/configuration' + this.apiKey)
+    }
 }

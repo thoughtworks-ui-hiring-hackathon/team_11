@@ -5,7 +5,7 @@
     </div>
     <div>
       <div class="movie-card-container">
-        <app-movie-card [movies]="latestMovies" [genres]="genres"></app-movie-card>
+        <app-movie-card [movies]="latestMovies" [genres]="genres" [imageConfig]="imageConfig"></app-movie-card>
       </div>
     </div>
   </div>
@@ -15,7 +15,7 @@
       Trending
     </div>
     <div class="movie-card-container">
-      <app-movie-card [movies]="trendingMovies" [genres]="genres"></app-movie-card>
+      <app-movie-card [movies]="trendingMovies" [genres]="genres" [imageConfig]="imageConfig"></app-movie-card>
     </div>
   </div>
 
@@ -24,7 +24,7 @@
       Most Watched
     </div>
     <div class="movie-card-container">
-      <app-movie-card [movies]="popularMovies" [genres]="genres"></app-movie-card>
+      <app-movie-card [movies]="popularMovies" [genres]="genres" [imageConfig]="imageConfig"></app-movie-card>
     </div>
   </div>
 </div>

@@ -10,6 +10,7 @@ export class MovieCardComponent implements OnInit {
   @Input() movies:any = [];
   @Input() genres: any = [];
   @Input() rating:number = 0;
+  @Input() imageConfig:any = {};
 
   constructor() { }
 
@@ -28,5 +29,13 @@ export class MovieCardComponent implements OnInit {
 
     }
     return results;
+  }
+
+  getImagePath(posterPath) {
+    if(this.imageConfig.baseurl) {
+      return this.imageConfig.baseurl + this.imageConfig.width + '/' + posterPath;
+    } else {
+      return 'https://dummyimage.com/225';
+    }
   }
 }

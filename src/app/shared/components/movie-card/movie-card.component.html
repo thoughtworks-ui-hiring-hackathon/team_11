@@ -2,7 +2,7 @@
 <div class="d-flex">
   <div class="card movie-card" *ngFor="let movie of movies | rangeFilter:rating;">
     <div class="card-body movie-card-body">
-      <img src="https://dummyimage.com/225" />
+      <img src="{{getImagePath(movie.poster_path)}}" />
     </div>
     <div class="card-footer movie-card-footer">
       <div class="d-flex">

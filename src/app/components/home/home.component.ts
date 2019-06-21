@@ -13,6 +13,10 @@ export class HomeComponent implements OnInit {
   public latestMovies: any = [];
   public popularMovies: any = [];
   public genres: any = [];
+  public imageConfig = {
+    baseurl: '',
+    width: ''
+  }
 
   constructor(private homeService: HomeService) { }
 
@@ -24,6 +28,7 @@ export class HomeComponent implements OnInit {
     this.getLatestMovies();
     this.getPopularMovies();
     this.getGeneres();
+    this.getImageConfig();
   }
 
   getTrendingMovies() {
@@ -55,6 +60,15 @@ export class HomeComponent implements OnInit {
       if (data && data['genres']) {
         this.genres = data['genres'];
       }
-    })
+    });
+  }
+
+  getImageConfig() {
+    this.homeService.getImageConfig().subscribe(data => {
+      if (data && data['images']) {
+        this.imageConfig.baseurl = data['images'].base_url;
+        this.imageConfig.width = data['images'].poster_sizes[2];
+      }
+    });
   }
 }
