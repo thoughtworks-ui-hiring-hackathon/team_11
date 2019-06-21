@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
   public trendingMovies: any = [];
   public latestMovies: any = [];
   public popularMovies: any = [];
+  public genres: any = [];
 
   constructor(private homeService: HomeService) { }
 
@@ -21,7 +22,8 @@ export class HomeComponent implements OnInit {
   ngAfterViewInit() {
     this.getTrendingMovies();
     this.getLatestMovies();
-    this.popularMovies();
+    this.getPopularMovies();
+    this.getGeneres();
   }
 
   getTrendingMovies() {
@@ -48,4 +50,11 @@ export class HomeComponent implements OnInit {
     });
   }
 
+  getGeneres() {
+    this.homeService.getGenres().subscribe(data => {
+      if (data && data['genres']) {
+        this.genres = data['genres'];
+      }
+    })
+  }
 }

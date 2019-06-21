@@ -1,12 +1,18 @@
+@import '../../variables.scss';
+
 .movie-card {
-    width: 227px;
-    height: 350px;
+    min-width: 227px;
+    min-height: 350px;
+    margin-right: 10px;
     &-body {
         padding: 0;
         height: 225px;
     }
     &-footer {
         height: 150px;
+        &-title-text {
+            font-size: $font-size-card-title;
+        }
         &-rating {
             margin-top: 10px;
         }

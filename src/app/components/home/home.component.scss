@@ -1,0 +1,20 @@
+@import '../../shared/variables.scss';
+
+.home-container {
+   width: 80%;
+   margin-left: 10%;
+   margin-bottom: 5%;
+}
+
+.movie-trends {
+    margin-top: 50px;
+}
+
+.movie-card-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.movies-type-header {
+    font-size: $font-size-category-heading;
+}

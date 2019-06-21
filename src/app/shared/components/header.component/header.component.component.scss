@@ -1,13 +1,18 @@
 @import '../../variables.scss';
+
 #moview-app-menu {
     padding: 0;
 
     li {
         text-align: center;
-        width: 200px;
+        width: 150px;
         
         &.active {
             background-color: $menu-active;
         }
     }
+}
+
+.nav-link-text {
+    font-size: $font-size-card-title;
 }
