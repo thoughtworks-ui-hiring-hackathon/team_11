@@ -1,16 +1,13 @@
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark" id="moview-app-menu">
   <ul class="navbar-nav">
-    <li class="nav-item active">
-      <a class="nav-link" href="#">Active</a>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="'/accounts'">Moview App</a>
+    </li>
+    <li class="nav-item ">
+      <a class="nav-link" [routerLink]="'/home'" [routerLinkActive]="['active']">Home</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link disabled" href="#">Disabled</a>
+      <a class="nav-link" [routerLink]="'/explore'" [routerLinkActive]="['active']">Explore</a>
     </li>
   </ul>
 </nav>
