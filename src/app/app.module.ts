@@ -8,6 +8,7 @@ import { HeaderComponent } from './shared/components/header.component/header.com
 import { HomeComponent } from './components/home/home.component';
 import { ExploreComponent } from './components/explore/explore.component';
 import { MovieCardComponent } from './shared/components/movie-card/movie-card.component';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { HttpClientService } from './shared/services/http-client.service';
 
 @NgModule({
@@ -20,6 +21,8 @@ import { HttpClientService } from './shared/services/http-client.service';
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
+    AngularFontAwesomeModule,
     HttpClientModule,
     AppRoutingModule
   ],
