@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-<<<<<<< HEAD
+@import 'app/shared/variables.scss';
+
 html {
     // Prevent horizontal scrollbars
     overflow-x: hidden;
@@ -14,6 +15,4 @@ body {
     line-height: 1.42857;
     color: #4c4a4a;
 }
-=======
-@import 'app/shared/variables.scss';
->>>>>>> 882fd5e25d6cc08fc3d53c0dd1e537e56f59104c
+

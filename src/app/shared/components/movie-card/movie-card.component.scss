@@ -1,0 +1,11 @@
+.movie-card {
+    width: 227px;
+    height: 350px;
+    &-body {
+        padding: 0;
+        height: 225px;
+    }
+    &-footer {
+        height: 150px;
+    }
+}
