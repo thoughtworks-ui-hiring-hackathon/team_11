@@ -1,25 +1,35 @@
-<div class="explore-movies-section">
+<div class="explore-movies-container">
     <div class="explore-movies-section-filter">
         <div class="row">
-            <div class="input-group col-md-4">
-                <input class="form-control py-2" type="search" value="search" placeholder="Search for movies, actor, genre..." name="search" [(ngModel)]="searchFor">
-                <span class="input-group-append">
-                    <button class="btn btn-outline-secondary" type="button" (click)="onSearch()">
+            <div class="input-group col-8">
+                <input class="form-control py-2" type="search" value="search"
+                    placeholder="Search for movies, actor, genre..." name="search" [(ngModel)]="searchFor">
+                <span class="input-group-append search-button">
+                    <button class="btn btn-sm btn-outline-secondary" type="button" (click)="onSearch()">
                         <fa name="fas fa-search"></fa>
                     </button>
                 </span>
             </div>
-            <div class="col-md-6">
-                <div class="slidecontainer">
-                    <input type="range" min="1" max="10" class="slider" id="myRange" [(ngModel)]="rangeSelected">
-                    <p>Range: {{rangeSelected}}</p>
+            <div class="col-4">
+                <div class="d-flex justify-content-center slider-container">
+                    <input type="range" min="1" max="10" step="1" class="custom-range slider" id="myRange"
+                        [(ngModel)]="rangeSelected" />
                 </div>
+                <div class="d-flex justify-content-center">
+                    <p>
+                        <strong>Movie rating :
+                            <span id="playbackSpeed">{{rangeSelected}}</span>
+                        </strong>
+                    </p>
+                </div>
+
             </div>
         </div>
     </div>
     <div class="explore-movies-section-result">
-        <div class="explore-movies-section-result-label">result</div>
-        <div class="explore-movies-section-result-details">
+        <div class="explore-movies-section-result-label result-heading">Result</div>
+        <div class="explore-movies-section-result-details movie-card-container">
+            <div class="no-result-text" *ngIf="movies.length ===0">No results</div>
             <app-movie-card [movies]="movies" [rating]="rangeSelected"></app-movie-card>
         </div>
     </div>
