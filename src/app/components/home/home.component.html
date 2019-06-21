@@ -1,14 +1,30 @@
-<div class="" id="">
-  <div class="latest-movies">
-    <div class="movies-type-header">Latest</div>
-    <app-movie-card [movies]="latestMovies"></app-movie-card>
+<div class="home-container">
+  <div class="latest-movies movie-trends">
+    <div class="movies-type-header">
+      Latest
+    </div>
+    <div>
+      <div class="movie-card-container">
+        <app-movie-card [movies]="latestMovies" [genres]="genres"></app-movie-card>
+      </div>
+    </div>
   </div>
-  <div class="trending-movies">
-      <div class="movies-type-header">Trending</div>
-      <app-movie-card [movies]="trendingMovies"></app-movie-card>
+
+  <div class="trending-movies movie-trends">
+    <div class="movies-type-header">
+      Trending
+    </div>
+    <div class="movie-card-container">
+      <app-movie-card [movies]="trendingMovies" [genres]="genres"></app-movie-card>
+    </div>
   </div>
-  <div class="popular-movies">
-      <div class="movies-type-header">Most Watched</div>
-      <app-movie-card [movies]="popularMovies"></app-movie-card>
+
+  <div class="popular-movies movie-trends">
+    <div class="movies-type-header">
+      Most Watched
+    </div>
+    <div class="movie-card-container">
+      <app-movie-card [movies]="popularMovies" [genres]="genres"></app-movie-card>
+    </div>
   </div>
 </div>

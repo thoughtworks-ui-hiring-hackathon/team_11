@@ -19,4 +19,8 @@ export class HomeService {
     getPopularMovies() {
         return this.httpClient.get(API_URLS.MOVIES.POPULAR_MOVIES + this.apiKey + '&language=en-US&page=1');
     }
+
+    getGenres() {
+        return this.httpClient.get(API_URLS.MOVIES.GENRE_LIST + this.apiKey + '&language=en-US');
+    }
 }

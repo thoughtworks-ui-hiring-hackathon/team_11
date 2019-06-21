@@ -6,6 +6,7 @@ let apiURLDef = {
         LATEST_MOVIES: COMMON_URL + 'movie/now_playing',
         POPULAR_MOVIES: COMMON_URL + 'movie/popular',
         SEARCH: COMMON_URL + 'search/multi',
+        GENRE_LIST: COMMON_URL + 'genre/movie/list'
     }
 };
 
