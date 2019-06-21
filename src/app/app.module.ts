@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,6 +9,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ExploreComponent } from './components/explore/explore.component';
 import { MovieCardComponent } from './shared/components/movie-card/movie-card.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { HttpClientService } from './shared/services/http-client.service';
 
 @NgModule({
   declarations: [
@@ -20,9 +22,13 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    HttpClientModule,
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    HttpClientService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
