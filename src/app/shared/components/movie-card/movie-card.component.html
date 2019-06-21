@@ -1,4 +1,4 @@
-<div class="card movie-card" *ngFor="let movie of movies; let i=index">
+<div class="card movie-card" *ngFor="let movie of movies | rangeFilter:rating; let i=index">
     <div class="card-body movie-card-body">
       <img src="https://dummyimage.com/225" />
     </div>

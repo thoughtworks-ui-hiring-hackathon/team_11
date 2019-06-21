@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class MovieCardComponent implements OnInit {
 
   @Input() movies:any = [];
+  @Input() rating:number = 0;
 
   constructor() { }
 

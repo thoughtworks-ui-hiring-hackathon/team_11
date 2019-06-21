@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -10,6 +11,7 @@ import { ExploreComponent } from './components/explore/explore.component';
 import { MovieCardComponent } from './shared/components/movie-card/movie-card.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { HttpClientService } from './shared/services/http-client.service';
+import { RangeFilterPipe } from './shared/pipes/filter';
 
 @NgModule({
   declarations: [
@@ -17,10 +19,12 @@ import { HttpClientService } from './shared/services/http-client.service';
     HeaderComponent,
     HomeComponent,
     ExploreComponent,
-    MovieCardComponent
+    MovieCardComponent,
+    RangeFilterPipe
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     AngularFontAwesomeModule,
     HttpClientModule,
